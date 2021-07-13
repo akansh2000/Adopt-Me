@@ -13,7 +13,7 @@ function App() {
 
   return(
     <div>
-    <BrowserRouter>
+    <BrowserRouter basename={'/Adopt-Me/'}>
      <Switch>
        <Route exact path="/" component={HookComp} /> 
        <Route exact path="/Home" component={Home} />
