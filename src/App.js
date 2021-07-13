@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Details from "./Details";
 import Adopt from "./Adopt";
 import Thanks from "./Thanks";
+import './style.css';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
     <div>
       <BrowserRouter basename={'/Adopt-Me/'}>
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL+'/Adopt-Me'} component={HookComp} />
+          <Route exact path='/' component={HookComp} />
           <Route exact path="/Home" component={Home} />
           <Route exact path='/Home/:id' component={Details} />
           {/* <Route exact path='/Home/:id/Adopt' component={Adopt} />  */}

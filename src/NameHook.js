@@ -1,7 +1,7 @@
  import { useState } from "react";
 //  import {Link } from "react-router-dom";
 
-
+import logo from './images/dog.gif';
 
 
               function HookComp() {
@@ -33,11 +33,10 @@
 
             </form>
             <div>
-            <img src='images/dog.gif' className='logo' alt='logo'/>
+            <img src={logo} className='logo' alt='logo'/>
             </div>
             </div>
             </div>
-
                 )
 
 
@@ -57,7 +56,7 @@
                 
                 function Homepg() {
 
-                  window.location.href='http://localhost:3000/Home';
+                  window.location.href='http://localhost:3000/Adopt-Me/Home';
                   
                 }
                 
