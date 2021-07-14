@@ -1,10 +1,13 @@
  import { useState } from "react";
 //  import {Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import logo from './images/dog.gif';
 
 
               function HookComp() {
+
+                const history= useHistory();
 
                 const [name, setName]= useState('');
                 var str='Wassup ' + name; 
@@ -56,7 +59,8 @@ import logo from './images/dog.gif';
                 
                 function Homepg() {
 
-                  window.location.href='https://akansh2000.github.io/Adopt-Me/Home';
+                  // window.location.href='https://akansh2000.github.io/Adopt-Me/Home';
+                  history.push('/Home');
                   
                 }
                 

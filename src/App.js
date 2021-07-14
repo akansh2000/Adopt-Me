@@ -14,9 +14,9 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter basename={'/Adopt-Me/'}>
+      <BrowserRouter >
         <Switch>
-          <Route exact path='/' component={HookComp} />
+          <Route exact path='/Adopt-Me' component={HookComp} />
           <Route exact path="/Home" component={Home} />
           <Route exact path='/Home/:id' component={Details} />
           {/* <Route exact path='/Home/:id/Adopt' component={Adopt} />  */}
