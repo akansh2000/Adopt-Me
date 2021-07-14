@@ -59,7 +59,6 @@ import logo from './images/dog.gif';
                 
                 function Homepg() {
 
-                  // window.location.href='https://akansh2000.github.io/Adopt-Me/Home';
                   history.push('/Home');
                   
                 }

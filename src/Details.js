@@ -14,7 +14,6 @@ class Details extends Component
   this.onClickBack=this.onClickBack.bind(this);
   this.fetchData=this.fetchData.bind(this);
   this.componentDidMount=this.componentDidMount.bind(this);
-  this.onClickReturn=this.onClickReturn.bind(this);
 
         this.state={
 
@@ -138,17 +137,14 @@ onClickForward()
     }
   }
 
-  onClickReturn()
-  {
-    window.location.href='/Home';
-  }
-
 
   render()
   {
     return(
       <div className='full'>
-        <button className='back' onClick={this.onClickReturn}>&#x2190; Back</button>
+        <Link to='/Home'>
+        <button className='back'>&#x2190; Back</button>
+        </Link>
         <h1 className='heading'>{this.state.Name}</h1>
         <p className='para'>{this.state.text}</p>
         <img src={this.state.slideImages[this.state.index]} alt="no image" className='swipe' />
