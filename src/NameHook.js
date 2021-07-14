@@ -56,7 +56,7 @@ import logo from './images/dog.gif';
                 
                 function Homepg() {
 
-                  window.location.href='http://localhost:3000/Adopt-Me/Home';
+                  window.location.href='https://akansh2000.github.io/Adopt-Me/Home';
                   
                 }
                 
