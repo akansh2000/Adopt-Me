@@ -69,7 +69,7 @@ render(){
 
             return(
                 <div className='checkbox'>
-                    <label htmlFor='Check' className='checkbox_label' >Have you cross-checked all details.<br />If yes, check the box.</label>
+                    <label htmlFor='Check' className='checkbox_label' >Have you cross-checked all details?<br />If yes, check the box.</label>
                     <Link to='/Thanks'>
                         <input type='checkbox' name='Check' className='checkbox_in' />
                     </Link>
