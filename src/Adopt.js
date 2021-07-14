@@ -1,47 +1,34 @@
 import {Component } from "react";
 import React from "react";
-
-
-// const Adopt=(props)=>{
-
-
-    // function onThanks() {
-
-    //     console.log('In onThanks')
-    //     window.location.href='/Thanks';
-        
-    // }
+import { Link } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
+import Confirm from "./Confirm";
 
     class Adopt extends Component
     {
         constructor(){
             super();
 
-            this.onThanks=this.onThanks.bind(this);
+            this.state={show:false};
+            this.toggleCheck=this.toggleCheck.bind(this);
         }
 
-            onThanks() {
+toggleCheck=()=>{
+    const {show} =this.state;
+    this.setState({show: !show})
+}
 
-            console.log('In onThanks')
-            window.location.href='/Thanks';
-            
-        }
-    
+
 render(){
     return(
-        // <div className='main'>
-            // <h1>Registration Process</h1>
-            // <form>
-            //     <label htmlFor='First'>First Name</label>
-            //     <input type='text' name='First' />
-            // </form>
-        // </div>
 <div className="pet">
+
 
 <h1 className='register'>Registration Process</h1>
             <form className='form' onSubmit={e=>{
               e.preventDefault();
-              this.onThanks();}}>
+              this.toggleCheck()
+              }}>
                 <h3 className='general'>GENERAL DETAILS:</h3>
                 <label htmlFor='First'>*First Name: </label>
                 <input type='text' name='First' placeholder='First Name' className='form_field' required />
@@ -66,25 +53,30 @@ render(){
                 <label htmlFor='File'>*Upload photo of ID proof:</label>
                 <input type='file' name='File' className='file' required/>
                 <input type='submit' value='Submit' className='form_fill' />
-                <button onClick={()=>{window.location.href='/Home'}} className='cancel'>Cancel</button>
+                <Link to='/Home'>
+                <button className='cancel'>Cancel</button>
+                </Link>
+                {this.state.show && <Box />}
             </form> 
-
 </div>
 
     )
 }
     }
 
-// function Email_check(e) {
-//     console.log(e.target.value);
-//     let str=e.target.value;
-//     let arr=str.split('@')
-//     console.log(arr.length)
-//     if(arr.length==1){
-//         console.log('insert @')
-//     alert('insert @')
-//     }
-//}
+    class Box extends Component{
+        render(){
+
+            return(
+                <div className='checkbox'>
+                    <label htmlFor='Check' className='checkbox_label' >Have you cross-checked all details.<br />If yes, check the box.</label>
+                    <Link to='/Thanks'>
+                        <input type='checkbox' name='Check' className='checkbox_in' />
+                    </Link>
+              </div>
+            )
+        }
+    }
 
 
 export default Adopt;

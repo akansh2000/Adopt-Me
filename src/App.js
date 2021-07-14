@@ -9,6 +9,7 @@ import Details from "./Details";
 import Adopt from "./Adopt";
 import Thanks from "./Thanks";
 import './style.css';
+import Confirm from './Confirm';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/Home/:id' component={Details} />
           {/* <Route exact path='/Home/:id/Adopt' component={Adopt} />  */}
           <Route exact path={['/Home/1/Adopt', '/Home/2/Adopt', '/Home/3/Adopt', '/Home/4/Adopt', '/Home/5/Adopt', '/Home/6/Adopt', '/Home/7/Adopt', '/Home/8/Adopt']} component={Adopt} />
+          <Route exact path='/Confirm' component={Confirm} />
           <Route exact path='/Thanks' component={Thanks} />
         </Switch>
       </BrowserRouter>
