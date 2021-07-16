@@ -511,6 +511,9 @@ input {
   margin-top: -5px;
   margin-left: 10px;
 }
+.mag:hover {
+  cursor: pointer;
+}
 .checkbox {
   display: flex;
 }
@@ -534,4 +537,28 @@ input {
 #header div#snav div a {
   display: block;
   height: 5px;
+}
+
+.submit {
+  width: 70px;
+  background-color: #1c87c9;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.Search {
+  padding: 4px 10px;
+  border: 0;
+  font-size: 16px;
+  width: 50%;
+}
+
+.Search_form {
+  margin-left: 340px;
+}
+
+.submit:hover {
+  cursor: pointer;
+  width: 74px;
+  height: 27px;
 }
