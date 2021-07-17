@@ -17,11 +17,11 @@ class Details extends Component
 
         this.state={
 
+          loading:true,
           index:0,
           slideImages : ['/images/Reveal1.jpg'],
           Name:'' ,
           text:'',
-          check:'false',
           ID:''
         }
 
@@ -31,6 +31,11 @@ class Details extends Component
       
       componentDidMount(){
         const id=this.props.match.params.id;
+        
+        this.setState({
+          loading:this.state.loading=false
+        })
+
         this.fetchData(id);
       }
 
@@ -101,7 +106,6 @@ this.setState(
   Name:this.state.Name=arr[id-1].name,
  slideImages:this.state.slideImages=arr[id-1].images,
  text:this.state.text=arr[id-1].text,
- check:this.state.check='false',
  ID:this.state.ID=id
 }
 
@@ -140,23 +144,33 @@ onClickForward()
 
   render()
   {
-    return(
-      <div className='full'>
-        <Link to='/Home'>
-        <button className='back'>&#x2190; Back</button>
-        </Link>
-        <h1 className='heading'>{this.state.Name}</h1>
-        <p className='para'>{this.state.text}</p>
-        <img src={this.state.slideImages[this.state.index]} alt="no image" className='swipe' />
-        <div className='btn1'>
-        <button onClick={this.onClickBack} className='prev' >&#8249;</button>
-        <button onClick={this.onClickForward} className='prev' >&#8250;</button>
-        </div>
-          <Link to={{pathname: `/Home/${this.state.ID}/Adopt`}}> 
-        <button className='animate_animated animate_bounce Buy'>Adopt {this.state.Name}</button> 
+    if(this.state.loading)
+    {
+      return(
+        <h1>Loading...
+          {console.log(this.state.loading)}
+        </h1>
+      )
+    }
+    else{
+      return(
+        <div className='full'>
+          <Link to='/Home'>
+          <button className='back'>&#x2190; Back</button>
           </Link>
-      </div>
-    )
+          <h1 className='heading'>{this.state.Name}</h1>
+          <p className='para'>{this.state.text}</p>
+          <img src={this.state.slideImages[this.state.index]} alt="no image" className='swipe' />
+          <div className='btn1'>
+          <button onClick={this.onClickBack} className='prev' >&#8249;</button>
+          <button onClick={this.onClickForward} className='prev' >&#8250;</button>
+          </div>
+            <Link to={{pathname: `/Home/${this.state.ID}/Adopt`}}> 
+          <button className='animate_animated animate_bounce Buy'>Adopt {this.state.Name}</button> 
+            </Link>
+        </div>
+      )
+    }
   }
 }
 
