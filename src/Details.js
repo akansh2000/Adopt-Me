@@ -1,8 +1,9 @@
 import {Component } from "react";
 import React from "react";
-import Adopt from "./Adopt";
-import {Link, Route  } from "react-router-dom";
-import {BrowserRouter} from 'react-router-dom';
+import {Link } from "react-router-dom";
+import load from './images/load.gif';
+
+
 
 class Details extends Component
 {
@@ -31,10 +32,11 @@ class Details extends Component
       
       componentDidMount(){
         const id=this.props.match.params.id;
-        
-        this.setState({
-          loading:this.state.loading=false
-        })
+       
+
+          setTimeout(() => this.setState({
+            loading:this.state.loading=false
+          }), 2000);
 
         this.fetchData(id);
       }
@@ -147,9 +149,10 @@ onClickForward()
     if(this.state.loading)
     {
       return(
-        <h1>Loading...
-          {console.log(this.state.loading)}
-        </h1>
+        <div className='load'>
+          <img className='load_img' src={load} alt='loading...' width='300px' height='300px'/>
+          <h2 className='load_head'>Loading...</h2>
+        </div>
       )
     }
     else{

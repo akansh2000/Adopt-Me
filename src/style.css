@@ -597,3 +597,20 @@ input {
   width: 74px;
   height: 27px;
 }
+
+.load {
+  color: white;
+  margin: 400px;
+  margin-top: 200px;
+  margin-left: 370px;
+}
+
+.load_head {
+  margin-top: -65px;
+  margin-left: 340px;
+  font-size: 30px;
+}
+
+.load_img {
+  margin-left: 250px;
+}

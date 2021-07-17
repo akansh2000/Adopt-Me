@@ -1,16 +1,21 @@
 import {Component } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import { BrowserRouter } from 'react-router-dom';
-import Confirm from "./Confirm";
+import load from './images/load.gif';
 
     class Adopt extends Component
     {
         constructor(){
             super();
 
-            this.state={show:false};
+            this.state={show:false,
+            loading:true};
+            
             this.toggleCheck=this.toggleCheck.bind(this);
+
+            setTimeout(()=>this.setState({
+                loading:this.state.loading=false
+            }),3000);
         }
 
 toggleCheck=()=>{
@@ -20,6 +25,19 @@ toggleCheck=()=>{
 
 
 render(){
+
+    if(this.state.loading)
+    {
+      return(
+        <div className='load'>
+          <img className='load_img' src={load} alt='loading...' width='300px' height='300px'/>
+          <h2 className='load_head'>Loading...</h2>
+        </div>
+      )
+    }
+
+    else{
+
     return(
 <div className="pet">
 
@@ -61,6 +79,7 @@ render(){
 </div>
 
     )
+            }
 }
     }
 
