@@ -15,7 +15,7 @@ import logo from './images/dog.gif';
                 return(
                   <div className="Front">
                     <div>
-                          <h1 className='adopt'>Adopt Me!</h1>
+                          <h1 className='adopt_main'>Adopt Me!</h1>
                       </div>
                 <div className='hook'>
             <h1 className='top_h'>Welcome to our Pet shop! <br/> {str}</h1>
