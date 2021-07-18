@@ -7,10 +7,12 @@ import five from './images/5.jpg';
 import six from './images/6.jpg';
 import seven from './images/7.jpg';
 import eight from './images/8.jpg';
+import nine from './images/9.jpg';
 import { Redirect } from 'react-router-dom';
 
 const Pets= (props) =>{
 
+  // let c=0;
 
   const arr=[
 
@@ -44,13 +46,22 @@ const Pets= (props) =>{
   
     {'name':'WELSH CORGI',
      'link':'Home/8'
+    },
+
+    {'name':'MUNCHKIN CAT',
+     'link':'Home/9'
     }
      ]
 for(let i=0;i<arr.length;i++){
   if((arr[i].name)===props.name)
   {
+    // c++;
       return <Redirect to={arr[i].link} />
   }
+  // if(c===0)
+  // return(
+  //   <div className='timeout'>Can't find your search</div>
+  // )
 }
 
   return(
@@ -129,6 +140,15 @@ for(let i=0;i<arr.length;i++){
                <h1 className='txt h'>Welsh corgi</h1>
     </Link>
                <h2 className='txt'>Available in: Fawn</h2> 
+  </div>
+
+  <div class="grid-item 9">  
+    
+    <Link to='Home/9' className='linkto'>
+    <img className="item g" src={nine} alt="Munchkin Cat" />
+               <h1 className='txt h'>Munchkin Cat</h1>
+    </Link>
+               <h2 className='txt'>Available in: White</h2> 
   </div>
   
   </div>

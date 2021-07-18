@@ -99,6 +99,13 @@ const arr=[
   'https://media.istockphoto.com/photos/portrait-red-welsh-corgi-dog-outdoors-in-the-park-on-a-sunny-summer-picture-id1061822700?k=6&m=1061822700&s=170667a&w=0&h=I5hrzc9InjpwKepvAlMM7x_VOpC_JSr8kmYK3r-MYLs=',
   'https://cdn.buttercms.com/ZF8K2t8hT8OoNR3W42bX'],
   'text':'The Pembroke Welsh Corgi is a cattle herding dog breed that originated in Pembrokeshire, Wales. It is one of two breeds known as a Welsh Corgi. The other is the Cardigan Welsh Corgi, and both descend from the line of northern spitz-type dogs.\n\n𝐋𝐢𝐟𝐞 𝐒𝐩𝐚𝐧: 12 – 15 years.\n𝐎𝐫𝐢𝐠𝐢𝐧: Pembrokeshire.\n𝐓𝐞𝐦𝐩𝐞𝐫𝐚𝐦𝐞𝐧𝐭: Playful, Tenacious, Friendly, Outgoing, Bold, Protective.\n𝐂𝐨𝐥𝐨𝐫𝐬: Fawn, Black & Tan, Sable, Black & White, Red.\n𝐇𝐞𝐢𝐠𝐡𝐭: Male: 25–30 cm, Female: 25–30 cm.\n𝐖𝐞𝐢𝐠𝐡𝐭: Male: 10–14 kg, Female: 10–13 kg\n' 
+  },
+
+  {'name':'Munchkin Cat',
+  'images':['https://i.pinimg.com/originals/b3/64/f8/b364f882acd292d5b62200309b581acb.jpg',
+  'https://lh3.googleusercontent.com/proxy/aNdaZZHkH_m_RV2ipDq8vbpCAeR3PonqesjPI3xmxAK1UztMPLBUfEETpr3Hl96oDGZc2WYFeo-NcXMyEjrQHIDIr1hsqAk',
+  'https://i.pinimg.com/originals/de/fb/fb/defbfb8b739a101db1d3f84e3d04c1a7.jpg'],
+  'text':'The Munchkin cat or Sausage cat is a relatively new breed of cat characterized by its very short legs, which are caused by genetic mutation.\nThe Munchkin is considered to be the original breed of dwarf cat.\nThe Munchkin, as you may have guessed from her name, is on the short side.\n\n𝐂𝐨𝐚𝐭 𝐥𝐞𝐧𝐠𝐭𝐡: Short\n𝐓𝐞𝐦𝐩𝐞𝐫𝐚𝐦𝐞𝐧𝐭: Friendly, Active, Fun-Loving, Quick.\n𝐇𝐞𝐚𝐥𝐭𝐡: Live about 12 to 15 years on average.\n𝐎𝐭𝐡𝐞𝐫 𝐭𝐫𝐚𝐢𝐭𝐬: Easy to train; easy to groom.' 
   }
    ]
 
